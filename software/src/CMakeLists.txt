@@ -20,6 +20,10 @@ if (TARGET usb_device)
             usb_sound_card.c
             )
 
+    target_sources(usb_sound_card PRIVATE
+        ${CMAKE_CURRENT_LIST_DIR}/tpa6130/tpa6130.c
+        )
+
     target_compile_definitions(usb_sound_card PRIVATE
             AUDIO_FREQ_MAX=48000
 
@@ -37,7 +41,7 @@ if (TARGET usb_device)
             PICO_AUDIO_I2S_MONO_INPUT=0
     )
 
-    target_link_libraries(usb_sound_card pico_stdlib usb_device 
+    target_link_libraries(usb_sound_card pico_stdlib usb_device hardware_i2c
         pico_audio_i2s pico_multicore)
     pico_add_extra_outputs(usb_sound_card)
 endif()

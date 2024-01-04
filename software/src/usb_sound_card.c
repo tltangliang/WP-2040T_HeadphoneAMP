@@ -635,7 +635,7 @@ int main(void) {
     usb_sound_card_init();
 
     // Init the TPA6130 headphone amp
-    //tpa6130_init();
+    tpa6130_init();
 
     multicore_launch_core1(core1_worker);
     printf("HAHA %04x %04x %04x %04x\n", MIN_VOLUME, DEFAULT_VOLUME, MAX_VOLUME, VOLUME_RESOLUTION);

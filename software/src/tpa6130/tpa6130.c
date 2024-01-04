@@ -10,8 +10,8 @@
 #include <stdio.h>
 
 #define TPA_I2C_PORT i2c0
-#define TPA_I2C_SDA 12
-#define TPA_I2C_SCL 13
+#define TPA_I2C_SDA 0
+#define TPA_I2C_SCL 1
 #define TPA_I2C_ADDR 0x60
 
 #define TPA6130_TWI_ADDRESS 0x60
