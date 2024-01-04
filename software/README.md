@@ -1,1 +1,1 @@
-WisdPi Dynamic Lighting Controller
+# Software for open Source Headphone AMP
